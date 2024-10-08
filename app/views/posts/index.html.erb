@@ -1,18 +1,23 @@
 <p style="color: green"><%= notice %></p>
-<div class="container ">
-  <h1>Posts</h1>
+<div class="container bg-light ">
+  <div class="d-flex justify-content-between align-items-center">
+    <h1>Posts</h1>
+    <%= link_to "New post", new_post_path, class: "btn btn-outline-warning " %>
+  </div>
 
-  <div id="posts" class="d-flex justify-content-between">
+  <div class="row">
 
     <% @posts.each do |post| %>
-    <div class="bg-secondary text-info rounded px-5" >
-      <%= render post %>
-      <p>
-        <%= link_to "Show this post", post %>
-      </p>
+    <div class="col-md-4 my-2 ">
+      <div class="bg-secondary text-light rounded px-5 py-1" >
+        <%= render post %>
+        <p>
+          <%= link_to "Show this post", post, class: "btn btn-info py-1 my-1 text-white" %>
+        </p>
+      </div>
     </div>
     <% end %>
   </div>
 
-  <%= link_to "New post", new_post_path %>
+  
 </div>
