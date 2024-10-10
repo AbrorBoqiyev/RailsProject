@@ -1,4 +1,4 @@
-<div class="container">
+<div id="form" class="container bg-light mx-5 my-3 p-3 w-75 rounded">
   <h1>New post</h1>
 
   <%= render "form", post: @post %>
@@ -6,6 +6,24 @@
   <br>
 
   <div>
-    <%= link_to "Back to posts", posts_path %>
+    <%= link_to "Back to posts", posts_path, class: "tugma btn btn-primary py-1 px-4" %>
   </div>
 </div>
+<style>
+  #form{
+    color: darkcyan;
+    box-shadow: 1px 1px 4px gray;
+  }
+  input, .textMe, .tugma{
+    width: 90%;
+    border-radius: 5px;
+    border:none;
+    outline: none;
+    box-shadow: 1px 1px 5px gray;
+    padding: 5px 15px;
+    font-family: cursive;
+  }
+  .create {
+    margin-top: 17px;
+  }
+</style>

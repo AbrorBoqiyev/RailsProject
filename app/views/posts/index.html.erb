@@ -1,5 +1,5 @@
 <p style="color: green"><%= notice %></p>
-<div class="container bg-light ">
+<div class="container p-4 rounded">
   <div class="d-flex justify-content-between align-items-center">
     <h1>Posts</h1>
     <%= link_to "New post", new_post_path, class: "btn btn-outline-warning " %>
@@ -8,16 +8,30 @@
   <div class="row">
 
     <% @posts.each do |post| %>
-    <div class="col-md-4 my-2 ">
-      <div class="bg-secondary text-light rounded px-5 py-1" >
-        <%= render post %>
-        <p>
-          <%= link_to "Show this post", post, class: "btn btn-info py-1 my-1 text-white" %>
-        </p>
+      <div class="col-md-4 my-2 ">
+        <div class="post bg-light rounded px-5 py-1" >
+          <%= render post %>
+          <p>
+            <%= link_to "Show this post", post, class: "btn btn-outline-info py-0 my-1 " %>
+          </p>
+        </div>
       </div>
-    </div>
     <% end %>
   </div>
 
   
 </div>
+
+<style>
+  .container{
+    box-shadow: 1px 1px 5px black;
+    backgroundcolor: yellow;  
+  }
+  .post {
+    box-shadow: 1px 1px 5px gray;
+  }
+  .post:hover{
+      transfor: scale(1.1);
+    }
+  
+</style>

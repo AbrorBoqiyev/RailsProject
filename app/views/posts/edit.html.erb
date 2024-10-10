@@ -1,4 +1,4 @@
-<div class="container">
+<div class="form container bg-light mx-5 my-3 p-3 w-75 rounded">
   <h1>Editing post</h1>
 
   <%= render "form", post: @post %>
@@ -6,7 +6,26 @@
   <br>
 
   <div>
-    <%= link_to "Show this post", @post %> |
-    <%= link_to "Back to posts", posts_path %>
+    <%= link_to "Show this post", @post, class: "btn btn-outline-success py-1" %> |
+    <%= link_to "Back to posts", posts_path, class: "btn btn-outline-primary py-1" %>
   </div>
 </div>
+
+<style>
+  .form{
+    color: darkcyan;
+    box-shadow: 1px 1px 4px gray;
+  }
+  input, .textMe, .tugma{
+    width: 90%;
+    border-radius: 5px;
+    border:none;
+    outline: none;
+    box-shadow: 1px 1px 5px gray;
+    padding: 5px 15px;
+    font-family: cursive;
+  }
+  .create {
+    margin-top: 17px;
+  }
+</style>
