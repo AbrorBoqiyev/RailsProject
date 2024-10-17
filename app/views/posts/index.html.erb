@@ -9,7 +9,7 @@
 
     <% @posts.each do |post| %>
       <div class="col-md-4 my-2 ">
-        <div class="post bg-secondary text-light rounded px-5 py-1" >
+        <div class="post  text-light rounded px-5 py-1" >
           <%= render post %>
           <p>
             <%= link_to "Show this post", post, class: "btn btn-outline-info py-0 my-1 " %>
@@ -27,6 +27,7 @@
     box-shadow: 1px 1px 5px gray;
   }
   .post {
+    background: linear-gradient(to right bottom, gray, #222, darkcyan);
     box-shadow: 1px 1px 5px gray;
     transition: 0.3s;
     opacity: 0.9;
