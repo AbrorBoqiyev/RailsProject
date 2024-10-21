@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   def profile
     @user.update(views: @user.views + 1)
   end
-
+  
+  def destroy
   private
 
   def set_user

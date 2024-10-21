@@ -1,3 +1,23 @@
-<h1><%= @user.name %></h1>
-<h6> <%= pluralize(@user.views, "view")%> </h6>
-<p>Find me in app/views/users/profile.html.erb</p>
+<div class="container py-5 px-5 my-5 rounded">
+    <h2>Profile page</h2>
+    <h1><%= @user.name %></h1>
+    <h6> <%= pluralize(@user.views, "view")%> </h6>
+    <p>Find me in app/views/users/profile.html.erb</p>
+</div>
+
+<style>
+    .container{
+        background: linear-gradient(to right bottom, lightblue, AliceBlue, Azure, rgb(233, 213, 210));
+        box-shadow: 1px 1px 5px #333;
+    }
+    h1{color: darkcyan}
+    h2{
+        text-align:center;
+        
+    }
+    h6{
+        color: green;
+        font-family: cursive;
+        cursor: pointer;
+    }
+</style>
