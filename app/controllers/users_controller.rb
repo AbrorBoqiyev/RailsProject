@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @user.update(views: @user.views + 1)
   end
   
-  def destroy
+  def destroy; end
   private
 
   def set_user
