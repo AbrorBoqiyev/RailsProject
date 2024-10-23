@@ -1,19 +1,20 @@
+<p style="color: green"><%= notice %></p>
 <div class="container rounded w-75 my-4 p-3 bg-light">
-  <p style="color: green"><%= notice %></p>
-
-  <%= render @post %>
-
-  <div>
-    <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-outline-success py-1 my-1 " %> |
-    <%= link_to "Back to posts", posts_path, class: "btn btn-outline-primary py-1 my-1 " %>
-
-    <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-outline-danger py-1 my-1" %>
-  </div>
+    <%= render @post %>
+    <div>
+      <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-outline-success py-1 my-1 " %> |
+      <%= link_to "Back to posts", posts_path, class: "btn btn-outline-primary py-1 my-1 " %>
+      <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-outline-danger py-1 my-1" %>
+    </div>
 </div>
 
 <div class="container">
   <%= render "comments/form", post: @post %>
 </div>
+
+
+
+
 
 
 <style>
