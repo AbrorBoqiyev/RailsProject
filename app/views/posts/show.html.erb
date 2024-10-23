@@ -1,5 +1,4 @@
-<p style="color: green"><%= notice %></p>
-<div class="container rounded w-75 my-4 p-3 bg-light">
+<div class="container cover rounded w-75 my-4 p-3 bg-light">
     <%= render @post %>
     <div>
       <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-outline-success py-1 my-1 " %> |
@@ -11,6 +10,11 @@
 <div class="container">
   <%= render "comments/form", post: @post %>
 </div>
+<div class="container ">
+  <% @comments.each do |comment| %>
+    <%= render "comments/comment", post: @post, comment: comment %>
+  <% end %>  
+</div>
 
 
 
@@ -18,7 +22,7 @@
 
 
 <style>
-  .container{
+  .cover{
     box-shadow: 1px 1px 5px gray;
   }
 </style>
