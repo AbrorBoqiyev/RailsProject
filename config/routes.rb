@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
 
-  get 'about', to: "pages#about"
+  get 'about-us', to: "pages#about_us", as: 'about'
   get 'posts', to: "pages#posts"
 
   get "/articles", to: "articles#index"
