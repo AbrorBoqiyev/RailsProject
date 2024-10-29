@@ -1,0 +1,13 @@
+<div class=" comment-<%= comment.id %> container rounded"
+     style="box-shadow: 1px 1px 5px black; margin: 1em; padding: 1em;">
+    <span style="font-style: italic;"> <%= comment.user.email %> </span> <br />
+    <span style="font-size: 12px; color: #333" >Posted <%= time_ago_in_words(comment.created_at)%> ago </span>
+
+    <% if comment.user == current_user %>
+        <div class="btn-group float-end ">
+            <%= button_to "Delete", [post, comment], class: "btn btn-outline-danger py-1", method: :delete %>
+        </div>
+    <% end %>
+    <hr >
+    <%= comment.body%>
+</div>
