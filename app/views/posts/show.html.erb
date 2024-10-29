@@ -7,14 +7,6 @@
     </div>
 </div>
 
-<div class="container">
-  <%= render "comments/form", post: @post %>
-</div>
-<div class="container ">
-  <% @comments.each do |comment| %>
-    <%= render "comments/comment", post: @post, comment: comment %>
-  <% end %>  
-</div>
 
 
 
