@@ -1,0 +1,18 @@
+# .rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 3.1.2p20 # Bu yerga sizning Ruby versiyangizni kiriting
+  Exclude:
+    - 'db/**/*' # db papkasidagi fayllarni e'tibordan chetlatadi
+    - 'config/**/*' # config papkasidagi fayllarni e'tibordan chetlatadi
+
+Metrics/LineLength:
+  Max: 120 # Qator uzunligini 120 belgigacha cheklaydi
+
+Layout/IndentationWidth:
+  Width: 2 # Indentatsiya kengligini 2 bo'lishini belgilaydi
+
+Style/FrozenStringLiteralComment:
+  Enabled: false # "Frozen string literal" izohini o'chirish
+
+# Siz xohlagan boshqa qoidalarni ham qo'shishingiz mumkin.

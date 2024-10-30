@@ -74,3 +74,5 @@ end
 gem 'devise'
 
 gem 'pg'
+
+gem 'rubocop', require: false
