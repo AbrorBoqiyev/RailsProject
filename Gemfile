@@ -76,3 +76,6 @@ gem 'devise'
 gem 'pg'
 
 gem 'rubocop', require: false
+
+gem 'stimulus-rails'
+
